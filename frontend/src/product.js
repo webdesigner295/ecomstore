@@ -1,5 +1,5 @@
 const products = [{
-    _id: "1",
+    // _id: "1",
     name: "Airpods",
     price :12,
     image: '/images/airpods.jpg',
@@ -13,7 +13,7 @@ const products = [{
     
 },
     {
-        _id: "2",
+        // _id: "2",
         name: "Alexa",
         price :32,
         image: '/images/alexa.jpg',
@@ -25,7 +25,7 @@ const products = [{
         numReview:10,
     },
     {
-        _id: "3",
+        // _id: "3",
         name: "Camera EOS Rebel SL3 EF-S 18-55mm f/4-5.6 IS STM Lens Kit Black",
         price :82,
         image: '/images/camera.jpg',
@@ -37,7 +37,7 @@ const products = [{
         numReview:12,
     },
     {
-        _id: "4",
+        // _id: "4",
         name: "Mouse",
         price :55,
         image: '/images/mouse.jpg',
@@ -49,7 +49,7 @@ const products = [{
         numReview:10,
     },
     {
-        _id: "5",
+        // _id: "5",
         name: "Phone",
         price :99,
         image: '/images/phone.jpg',
@@ -61,7 +61,7 @@ const products = [{
         numReview:10,
     },
     {
-        _id: "6",
+        // _id: "6",
         name: "Play Station",
         price :122,
         image: '/images/playstation.jpg',
