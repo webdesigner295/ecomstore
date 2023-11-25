@@ -8,7 +8,8 @@ const products = [{
     category: 'Electronics',
     countInStock: 10,
     rating: 4.5,
-    numReview:20
+    numReview: 20,
+
     
     
 },
@@ -22,7 +23,8 @@ const products = [{
         category: 'Electronics',
         countInStock: 5,
         rating: 5,
-        numReview:10,
+        numReview: 10,
+       
     },
     {
       

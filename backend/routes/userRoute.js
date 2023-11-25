@@ -10,15 +10,16 @@ import {
     deleteUser,
     updateUser
 } from '../controllers/userController.js';
+import { protect, admin } from '../middelware/authMiddleware.js';
 
 const router = express.Router();
 
-router.route('/').post(registerUser).get(getUsers)
+router.route('/').post(registerUser).get(protect, admin, getUsers)
 router.post('/logout', userLogout)
-router.post('/login', authUser)
+router.post('/auth', authUser)
 
-router.route('/profile').get(getUserProfile).put(updateUserProfile)
+router.route('/profile').get( protect, getUserProfile).put( protect, updateUserProfile)
 
-router.route('/:id').get(getUserById).put(updateUser).delete(deleteUser)
+router.route('/:id').get(protect, admin, getUserById).put( protect, admin,  updateUser).delete(protect, admin,deleteUser)
 
 export default router

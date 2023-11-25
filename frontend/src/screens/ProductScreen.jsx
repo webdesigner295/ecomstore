@@ -44,9 +44,10 @@ const ProductScreen = () => {
   
   // Redux Start Time
   const { data: product, isLoading, error } = useGetPruductDeatailsQuery(productId)
-  console.log("Add ",  addToCart({...product,qty}))
+  // console.log("Add ",  addToCart({...product,qty}))
 
   const addToCartHandler = () => {
+    console.log("product", product)
     dispatch(addToCart({ ...product, qty }))
     navigate('/cart')
 
@@ -80,7 +81,7 @@ const ProductScreen = () => {
             <h3>{ product.name}</h3>
           </ListGroup.Item>
           <ListGroup.Item>
-            <Rating value={product.rating} text={`${product.numReview} reviews`}/>
+            <Rating value={product.rating} text={`${product.reviews.length} reviews`}/>
 
           </ListGroup.Item>
           <ListGroup.Item>
