@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Rating from './Rating'
 const Product = ({ product }) => {
-    console.log("producs", product)
+    // console.log("producs", product)
   return (
       <Card className='m-3 p-3 rounded'>
           <Link to={`/product/${product._id}`}>

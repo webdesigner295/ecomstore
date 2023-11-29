@@ -10,8 +10,7 @@ import {
   Card,
 } from 'react-bootstrap';
 import { FaTrash } from 'react-icons/fa';
-// import Message from '../components/Message';
-import Message from '../componrnts/Message';
+import Message from '../components/Message';
 import { addToCart, removeFromCart } from '../slices/cartSlice';
 
 const CartScreen = () => {
@@ -31,11 +30,9 @@ const CartScreen = () => {
     dispatch(removeFromCart(id));
   };
 
-    const checkOutHandler = () => {
-        
-        navigate('/login?redirect=/shipping')
-    }
- 
+  const checkoutHandler = () => {
+    navigate('/login?redirect=/shipping');
+  };
 
   return (
     <Row>
@@ -105,7 +102,7 @@ const CartScreen = () => {
                 type='button'
                 className='btn-block'
                 disabled={cartItems.length === 0}
-                onClick={checkOutHandler}
+                onClick={checkoutHandler}
               >
                 Proceed To Checkout
               </Button>
