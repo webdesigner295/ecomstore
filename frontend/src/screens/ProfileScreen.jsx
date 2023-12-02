@@ -31,10 +31,13 @@ const ProfileScreen = () => {
 
   const dispatch = useDispatch();
   const submitHandler = async (e) => {
+
     e.preventDefault();
     if (password !== confirmPassword) {
+
       toast.error('Passwords do not match');
     } else {
+      
       try {
         const res = await updateProfile({
           _id: userInfo._id,
